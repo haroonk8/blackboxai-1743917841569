@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Racing Game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 overflow-hidden">
+    <!-- Start Screen -->
+    <div id="start-screen" class="fixed inset-0 bg-black flex flex-col items-center justify-center text-white">
+        <h1 class="text-5xl mb-8 font-bold">Car Racing Game</h1>
+        <div class="flex gap-4 mb-8">
+            <button data-difficulty="easy" class="px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-bold rounded">Easy</button>
+            <button data-difficulty="medium" class="px-6 py-3 bg-yellow-600 hover:bg-yellow-700 text-white font-bold rounded">Medium</button>
+            <button data-difficulty="hard" class="px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-bold rounded">Hard</button>
+        </div>
+    </div>
+
+    <!-- Game Canvas -->
+    <canvas id="race-track" class="hidden"></canvas>
+
+    <!-- Game Over Screen -->
+    <div id="game-over" class="hidden fixed inset-0 bg-black flex flex-col items-center justify-center text-white">
+        <h2 class="text-4xl mb-6 font-bold">Race Finished!</h2>
+        <p class="text-2xl mb-4">Final Score: <span id="final-score">0</span></p>
+        <button id="restart-btn" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded">Restart</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
