@@ -1,0 +1,65 @@
+#race-track {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    background-color: #111;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#start-screen, #game-over {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.car {
+    position: absolute;
+    transition: transform 0.1s ease-out;
+}
+
+.obstacle {
+    position: absolute;
+    background-color: red;
+    border-radius: 4px;
+}
+
+/* Road markings */
+.road-marking {
+    position: absolute;
+    width: 10px;
+    height: 60px;
+    background-color: yellow;
+}
+
+/* Score display */
+#score-display {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+}
+
+/* Difficulty indicators */
+.difficulty-indicator {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 18px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #start-screen h1 {
+        font-size: 2.5rem;
+    }
+    
+    .difficulty-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
